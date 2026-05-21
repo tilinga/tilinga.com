@@ -1,0 +1,2 @@
+title: Домашняя
+layout: home
