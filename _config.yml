@@ -1,4 +1,4 @@
 title: Julia Tilinga
 description: Юлия Тилинга
-theme: minima
+theme: just-the-docs
 permalink: /:title/      # красивые адреса страниц
