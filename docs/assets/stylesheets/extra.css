@@ -1,0 +1,4 @@
+/* Скрываем заголовок правого оглавления */
+.md-nav--secondary > label {
+  display: none !important;
+}
