@@ -2,6 +2,7 @@ site_name: Julia Tilinga
 
 theme:
   name: material
+  custom_dir: overrides
   favicon: assets/images/favicon.ico
   logo: assets/images/logo.jpg
   features:
