@@ -3,7 +3,6 @@ site_name: Julia Tilinga
 theme:
   name: material
   favicon: assets/images/favicon.ico
-  logo: assets/images/logo.png  # лого в верхнем левом углу сайта
   features:
     - navigation.tabs # верхняя навигация для разделов первого уровня
     - navigation.sections # вруппировка подпапок в боковом меню
@@ -12,5 +11,4 @@ theme:
 plugins:
   - search # автоматически находит файлы и строить иерархию папок
 
-extra:
-  generator: false  # скрывает стандартный footer копирайт MkDocs
+copyright: '© 1988-2026 Julia Tilinga' 
