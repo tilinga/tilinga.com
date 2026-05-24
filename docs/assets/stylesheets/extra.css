@@ -1,12 +1,25 @@
+/* Принудительно показываем левый сайдбар (меню) и скрываем кнопку-гамбургер */
 @media screen and (min-width: 60em) {
+  
+  /* 1. Показываем левую панель навигации */
   .md-sidebar--primary {
     display: block !important;
   }
-  .md-sidebar--secondary {
-    display: block !important;
-  }
-  /* Скрываем мобильную кнопку меню, так как сайдбар открыт */
-  [data-md-toggle="drawer"] ~ .md-header .md-icon--menu {
+
+  /* 2. Скрываем иконку гамбургера в шапке */
+  .md-header__button[data-md-toggle="drawer"] {
     display: none !important;
+  }
+
+  /* 3. Корректируем ширину основного контента, чтобы он не улетал, 
+        когда сайдбар зафиксирован */
+  .md-content {
+    margin-left: 0 !important;
+  }
+
+  /* 4. Возвращаем правильное отображение сетки сайта */
+  .md-main__inner {
+    display: grid !important;
+    grid-template-columns: 12.1rem 1fr !important; /* Выделяем место под сайдбар */
   }
 }
