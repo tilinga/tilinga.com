@@ -13,4 +13,4 @@ theme:
 plugins:
   - search # автоматически находит файлы и строить иерархию папок
 
-copyright: '© 1988–2026 Julia Tilinga | 🅐 <a href="https://music.apple.com/us/artist/julia-tilinga/1752864835" target="_blank" rel="noopener">Apple Music</a> | 🅢 <a href="https://open.spotify.com/artist/29Z2YEcTujgk9DreH3sRmC" target="_blank" rel="noopener">Spotify</a> | 🅨 <a href="https://music.yandex.com/artist/22514951" target="_blank" rel="noopener">Yandex Music</a>'
+copyright: '<div style="text-align: center; width: 100%;">© 1988–2026 Julia Tilinga | <a href="https://music.apple.com/us/artist/julia-tilinga/1752864835" target="_blank" rel="noopener">🅝 Apple Music</a> | <a href="https://open.spotify.com/artist/29Z2YEcTujgk9DreH3sRmC" target="_blank" rel="noopener">🅢 Spotify</a> | <a href="https://music.yandex.com/artist/22514951" target="_blank" rel="noopener">🅨 Yandex Music</a></div>'
