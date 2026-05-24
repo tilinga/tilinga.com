@@ -3,10 +3,12 @@ site_name: Julia Tilinga
 theme:
   name: material
   features:
-    - navigation.tabs # Верхняя навигация для разделов первого уровня
-    - navigation.sections # Группировка подпапок в боковом меню
-    - navigation.indexes # Позволяет делать кликабельными сами папки
+    - navigation.tabs # верхняя навигация для разделов первого уровня
+    - navigation.sections # вруппировка подпапок в боковом меню
+    - navigation.indexes # позволяет делать кликабельными сами папки
 
-# Автоматически находить файлы и строить иерархию папок
 plugins:
-  - search
+  - search # автоматически находит файлы и строить иерархию папок
+
+extra:
+  generator: false  # скрывает стандартный footer копирайт MkDocs
