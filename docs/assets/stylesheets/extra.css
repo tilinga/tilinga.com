@@ -2,3 +2,39 @@
 .md-nav--secondary > label {
   display: none !important;
 }
+
+/* ==========================================
+   АВТОМАТИЧЕСКАЯ НУМЕРАЦИЯ В ЛЕВОМ САЙДБАРЕ
+   ========================================== */
+
+/* Сбрасываем счетчик для самого верхнего уровня левого меню */
+.md-nav--primary > .md-nav__list {
+  counter-reset: nav-level1;
+}
+
+/* Нумерация для разделов 1-го уровня (основные вкладки/папки) */
+.md-nav--primary > .md-nav__list > .md-nav__item {
+  counter-reset: nav-level2;
+}
+.md-nav--primary > .md-nav__list > .md-nav__item > .md-nav__link::before,
+.md-nav--primary > .md-nav__list > .md-nav__item > label::before {
+  counter-increment: nav-level1;
+  content: counter(nav-level1) ". ";
+  font-weight: bold; /* Делает цифры главных разделов чуть заметнее */
+}
+
+/* Нумерация для подразделов 2-го уровня (файлы внутри папок) */
+.md-nav--primary > .md-nav__list > .md-nav__item > .md-nav__nav > .md-nav__list > .md-nav__item {
+  counter-reset: nav-level3;
+}
+.md-nav--primary > .md-nav__list > .md-nav__item > .md-nav__nav > .md-nav__list > .md-nav__item > .md-nav__link::before,
+.md-nav--primary > .md-nav__list > .md-nav__item > .md-nav__nav > .md-nav__list > .md-nav__item > label::before {
+  counter-increment: nav-level2;
+  content: counter(nav-level1) "." counter(nav-level2) " ";
+}
+
+/* Нумерация для глубоких подразделов 3-го уровня (если они есть) */
+.md-nav--primary > .md-nav__list > .md-nav__item > .md-nav__nav > .md-nav__list > .md-nav__item > .md-nav__nav > .md-nav__list > .md-nav__item > .md-nav__link::before {
+  counter-increment: nav-level3;
+  content: counter(nav-level1) "." counter(nav-level2) "." counter(nav-level3) " ";
+}
