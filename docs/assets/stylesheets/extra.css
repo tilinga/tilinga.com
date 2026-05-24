@@ -1,0 +1,12 @@
+@media screen and (min-width: 60em) {
+  .md-sidebar--primary {
+    display: block !important;
+  }
+  .md-sidebar--secondary {
+    display: block !important;
+  }
+  /* Скрываем мобильную кнопку меню, так как сайдбар открыт */
+  [data-md-toggle="drawer"] ~ .md-header .md-icon--menu {
+    display: none !important;
+  }
+}
