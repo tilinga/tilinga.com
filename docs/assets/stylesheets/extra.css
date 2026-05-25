@@ -1,4 +1,15 @@
-/* Скрываем заголовок правого оглавления */
+/* Скрыть в левом сайдбаре название сайта */
+.md-nav--primary .md-nav__title {
+  display: none;
+}
+
+/* Скрыть в левом сайдбаре кнопку Home в автоматическом меню */
+.md-nav--primary > .md-nav__list > .md-nav__item:first-child {
+  display: none;
+}
+
+/* Скрыть в правом сайдбаре заголовок оглавления */
 .md-nav--secondary > label {
   display: none !important;
 }
+
