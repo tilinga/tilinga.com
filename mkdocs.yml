@@ -6,7 +6,6 @@ theme:
   favicon: assets/images/favicon.ico
   logo: assets/images/logo.jpg
   features:
-    - navigation.tabs
     - navigation.sections
     - navigation.indexes
 
