@@ -1,3 +1,13 @@
+/* Hide word Search */
+.md-search__input + .md-search__icon {
+  pointer-events: none;
+}
+
+/* Делает Search текст-подсказку невидимым */
+.md-search__form .md-search__input::placeholder {
+  color: transparent;
+}
+
 /* Скрыть в левом сайдбаре название сайта */
 .md-nav--primary .md-nav__title {
   display: none;
