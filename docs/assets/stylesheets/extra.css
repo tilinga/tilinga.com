@@ -27,3 +27,13 @@
   --md-primary-fg-color:        #1f2022; /* Темно-серый цвет футера */
   --md-primary-fg-color--dark:  #151617; /* Чуть более темный оттенок для мобильных и акцентов */
 }
+
+/* Цвет ссылки внутри заметки */
+.md-content a {
+  color: #3366CC;
+}
+
+/* Подчеркивание ссылки при наведении на нее */
+.md-content a:hover {
+  text-decoration: underline;
+}
