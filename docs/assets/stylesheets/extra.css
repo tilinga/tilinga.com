@@ -5,8 +5,8 @@
 }
 
 /* Header. Hide word Search */
-.md-search__input + .md-search__icon {
-  pointer-events: none;
+.md-search__form .md-search__input::placeholder {
+  color: transparent;
 }
 
 /* Sidebar Left. Hide site name */
