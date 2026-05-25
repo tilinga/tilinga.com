@@ -13,3 +13,9 @@
   display: none !important;
 }
 
+:root [data-md-color-primary="custom"] {
+  --md-primary-fg-color:        #1f2022; /* Темно-серый цвет футера */
+  --md-primary-fg-color--dark:  #151617; /* Чуть более темный оттенок для мобильных и акцентов */
+  --md-primary-bg-color:        #ffffff;
+  --md-primary-bg-color--light: #ffffff;
+}
