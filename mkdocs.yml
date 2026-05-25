@@ -18,3 +18,8 @@ copyright: '© 1988–2026 Julia Tilinga | <a href="https://music.apple.com/us/a
 
 extra_css:
   - assets/stylesheets/extra.css
+
+nav:
+  - ru:
+      - По-русски: index.md
+      - Мои песни: 'ru/song/'
