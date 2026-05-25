@@ -1,39 +1,35 @@
-/* Hide word Search */
+/* Header Color */
+:root [data-md-color-primary="custom"] {
+  --md-primary-fg-color:        #1f2022;
+  --md-primary-fg-color--dark:  #151617;
+}
+
+/* Header. Hide word Search */
 .md-search__input + .md-search__icon {
   pointer-events: none;
 }
 
-/* Делает Search текст-подсказку невидимым */
-.md-search__form .md-search__input::placeholder {
-  color: transparent;
-}
-
-/* Скрыть в левом сайдбаре название сайта */
+/* Sidebar Left. Hide site name */
 .md-nav--primary .md-nav__title {
   display: none;
 }
 
-/* Скрыть в левом сайдбаре кнопку Home в автоматическом меню */
+/* Sidebar Left. Hide Home button */
 .md-nav--primary > .md-nav__list > .md-nav__item:first-child {
   display: none;
 }
 
-/* Скрыть в правом сайдбаре заголовок оглавления */
+/* Sidebar Right. Hide TOC title */
 .md-nav--secondary > label {
   display: none !important;
 }
 
-:root [data-md-color-primary="custom"] {
-  --md-primary-fg-color:        #1f2022; /* Темно-серый цвет футера */
-  --md-primary-fg-color--dark:  #151617; /* Чуть более темный оттенок для мобильных и акцентов */
-}
-
-/* Цвет ссылки внутри заметки */
+/* Liks */
 .md-content a {
   color: #3366CC;
 }
 
-/* Подчеркивание ссылки при наведении на нее */
+/* Links */
 .md-content a:hover {
   text-decoration: underline;
 }
