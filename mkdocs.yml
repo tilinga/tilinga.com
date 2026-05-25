@@ -20,6 +20,7 @@ extra_css:
   - assets/stylesheets/extra.css
 
 nav:
-  - ru:
-      - По-русски: index.md
-      - Мои песни: 'ru/song/'
+  - In English: 'en/'
+  - По-русски:
+      - Главная: 'ru/index.md'
+      - Песни: 'ru/song/'
