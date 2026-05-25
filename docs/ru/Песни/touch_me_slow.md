@@ -1,5 +1,4 @@
 ---
-slug: touch_me_slow
 title: 3. Touch Me Slow
 ---
 

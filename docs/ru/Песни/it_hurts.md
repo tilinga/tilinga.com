@@ -1,5 +1,4 @@
 ---
-slug: it_hurts
 title: 2. Больно
 ---
 

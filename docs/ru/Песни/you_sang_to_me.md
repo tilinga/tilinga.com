@@ -1,5 +1,4 @@
 ---
-slug: you_sang_to_me
 title: 0. You Sang To Me
 ---
 

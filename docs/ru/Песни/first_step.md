@@ -1,5 +1,4 @@
 ---
-slug: first_step
 title: 1. Первый шаг
 ---
 
