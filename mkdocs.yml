@@ -20,9 +20,10 @@ extra_css:
   - assets/stylesheets/extra.css
 
 nav:
-  - По-русски:
-      - Юлия Тилинга: 'ru/index.md'
-      - Песни:
+  - 'ru':
+      - 'По-русски': 'ru/index.md'
+      - 'song':
+          - 'Песни':
           - "0. You Sang To Me": 'ru/song/you_sang_to_me.md'
           - "1. Первый шаг": 'ru/song/first_step.md'
           - "2. Больно": 'ru/song/it_hurts.md'
