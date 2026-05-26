@@ -18,13 +18,3 @@ copyright: '© 1988–2026 Julia Tilinga | <a href="https://music.apple.com/us/a
 
 extra_css:
   - assets/stylesheets/extra.css
-
-nav:
-  - 'ru':
-      - 'По-русски': 'ru/index.md'
-      - 'song':
-          - 'Песни':
-          - "0. You Sang To Me": 'ru/song/you_sang_to_me.md'
-          - "1. Первый шаг": 'ru/song/first_step.md'
-          - "2. Больно": 'ru/song/it_hurts.md'
-          - "3. Touch Me Slow": 'ru/song/touch_me_slow.md'
