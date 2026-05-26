@@ -1,0 +1,886 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../">
+      
+      
+        <link rel="next" href="../it_hurts/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>1. Первый шаг - Julia Tilinga</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Julia Tilinga" class="md-header__button md-logo" aria-label="Julia Tilinga" data-md-component="logo">
+      
+  <img src="../../../assets/images/logo.jpg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Julia Tilinga
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              1. Первый шаг
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Julia Tilinga" class="md-nav__button md-logo" aria-label="Julia Tilinga" data-md-component="logo">
+      
+  <img src="../../../assets/images/logo.jpg" alt="logo">
+
+    </a>
+    Julia Tilinga
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ru
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Ru
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Song
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Song
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Первый шаг
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Первый шаг
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Прослушать
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Слова песни
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        История создания
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="История создания">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#i-iii" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Эпизод I-III
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Эпизод IV. Пустой парк
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Эпизод V. Соседка
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Эпизод VI. Пересборка
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../it_hurts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Больно
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../touch_me_slow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Touch Me Slow
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../you_sang_to_me/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    0. You Sang To Me
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Прослушать
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Слова песни
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        История создания
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="История создания">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#i-iii" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Эпизод I-III
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Эпизод IV. Пустой парк
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Эпизод V. Соседка
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Эпизод VI. Пересборка
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="_1">Первый шаг</h1>
+<h2 id="_2">Прослушать</h2>
+<p>🅐 <a href="https://music.amazon.com/tracks/B0DPKDQW6J">Amazon Music</a><br />
+🅐 <a href="http://itunes.apple.com/album/id/1783273037">Apple Music</a><br />
+🅘 <a href="https://www.instagram.com/reels/audio/1297535491251949">Instagram</a><br />
+🅢 <a href="https://open.spotify.com/album/0CWblzIkko23rYulCFSpN6">Spotify</a><br />
+🅨 <a href="https://music.yandex.com/album/34303061">Yandex</a><br />
+🅨 <a href="https://music.youtube.com/watch?v=XRzpQviSzi0&amp;si=ZvWxyCD359ZFpYpv">YouTune</a></p>
+<h2 id="_3">Слова песни</h2>
+<p>Что-то сложно в тридцать пять начинать<br />
+Может ты подскажешь мне с чего начать?<br />
+Я подобным никогда не занималась<br />
+И только в мыслях я своих практиковалась  </p>
+<p>Новое дело меня манит<br />
+Хотя, конечно же, очень страшит<br />
+И я понимаю, что это магнит<br />
+Для неудач и ошибок<br />
+Их насмешек и кривых улыбок  </p>
+<p>Столько на планете людей гениальных<br />
+Ведь хочется смотреть только на идеальных<br />
+Куда им до таких, как я, ненормальных<br />
+А я хочу мечтать…  </p>
+<p>Сделай первый шаг<br />
+Ведь ты сама себе не враг<br />
+Сделай этот шаг<br />
+Ведь я тебе желаю благ  </p>
+<p>♪  </p>
+<p>Мечтаю свою первую песню написать<br />
+Хотя, в то же время, я боюсь облажать<br />
+В мыслях поклонники, толпы, стадионы<br />
+Их руки качаются из стороны в стороны<br />
+Я слышу их поддерживающие стоны<br />
+Я точно знаю, что их будут миллионы<br />
+Вижу уже, как я песню исполню<br />
+Но вдруг торможу я на скорости полной  </p>
+<p>И в голове строчки не складывается<br />
+Все картинки расплываются<br />
+Мечты растворяются<br />
+Реальность возвращается…  </p>
+<p>Успокаивает лишь ощущение мурашек по телу<br />
+И я чувствую в том, что я делаю силу<br />
+Пожалуй, кого-то точно зацепит<br />
+И в этой песне он свой знак увидит  </p>
+<p>Сделай первый шаг<br />
+Ведь ты сама себе не враг<br />
+Сделай этот шаг<br />
+Ведь я тебе желаю благ  </p>
+<p>Сделай первый шаг<br />
+♪<br />
+Сделай этот шаг<br />
+♪  </p>
+<p>Ты не выжидай<br />
+А сразу начинай<br />
+Делай, продолжай<br />
+И следуй за своей мечтой<br />
+Будь сама собой<br />
+Ведь только ты идёшь на бой<br />
+Светлый бой с самой собой  </p>
+<h2 id="_4">История создания</h2>
+<h3 id="i-iii">Эпизод I-III</h3>
+<p>[[0. You Sang To Me|читать здесь]]</p>
+<h3 id="iv">Эпизод IV. Пустой парк</h3>
+<p>Когда оплаченный абонемент в музыкальной студии закончился, я решила не продлевать его и со спокойной душой подумала, что пение, несмотря на весь этот прекрасный опыт, всё ещё не является моим истинным призванием</p>
+<p>В то время я жила в Москве и ежедневно, в любую погоду, подолгу гуляла со своей собакой в нашем любимом парке, где обычно всегда было много людей. Обычно всё шло своим чередом, мы встречали знакомых, неспешно болтали и смотрели, как резвятся животные</p>
+<p>Но, однажды вечером, когда зарядил плотный, унылый дождь, парк совершенно опустел, и мы, бродя в полном одиночестве по мокрым тропинкам, провалились в тишину, заставившую меня мысленно улететь далеко от реальности. В какой-то момент я внезапно начала ловить слова, приходившие из ниоткуда в мою голову и складывающиеся в рифмованные фразы и даже целые строчки</p>
+<p>Боясь упустить это хрупкое вдохновение, я судорожно наговаривала и записывала их в аудиосообщения, даже не подозревая, что прямо в тот момент, под шум капель, рождался текст моей самой первой песни</p>
+<p>До сих пор мне невероятно интересно переслушивать те архивные записи, где сквозь мой напевающий голос отчётливо слышны фоновые звуки дождя, ритмичные шаги по асфальту, эхо в подъезде, соткавшие неповторимую атмосферу того вечера</p>
+<p>Вернувшись домой, я перенесла слова из аудио записей в текстовые заметки и забыла про них</p>
+<h3 id="v">Эпизод V. Соседка</h3>
+<p>Буквально в тот же месяц случилось удивительное совпадение — в соседнюю квартиру переехали новые арендаторы, молодая пара. И девушка, к моему большому изумлению, оказалась преподавателем по вокалу</p>
+<p>Переодически встречаясь на лестничной площадке, я задавала музыкальные вопросы и расспрашивала про её опыт</p>
+<p>Конечно, когда человек, имеющий высшее музыкальное образование, уверенно рассуждает о создании своих песен, это кажется абсолютно нормальным и естественным, а мне, имеющей за плечами всего два месяца занятий, сама идея записать собственный полноценный трек казалась полнейшим, неосуществимым безумием</p>
+<p>Однако соседка, мягко развеивая мои страхи, уверенно сказала, что в современном мире это делается достаточно просто и за умеренную плату пообещала помочь и поддержать меня на всех этапах</p>
+<p>Если бы не мой запланированный полёт на Бали, я бы, скорее всего, поддалась сомнениям и отложила эту амбициозную идею в долгий ящик, но, понимая, что времени осталось катастрофически мало, мы начали неистово заниматься по два-три раза в неделю, выбрав в качестве музыкальной основы подходящий бесплатный бит из интернета. И, буквально за пару дней до посадки в самолёт, собрав волю в кулак, записали финальный вокал, после чего я со спокойной совестью улетела на зимовку</p>
+<p>Моё внутреннее сопротивление и страх критики были настолько сильными и удушающими, что готовая песня, пролежав «на полке», вышла на цифровых платформах только через полгода, за которые мы успели сменить нескольких аранжировщиков, безбожно тянувших время и срывавших все мыслимые сроки</p>
+<p>По моим личным, весьма строгим ощущениям, песня получилась от силы на три балла из десяти, поскольку вокал объективно оставался слабым, записываемым буквально по одной строчке, отчего сводить трек было невероятно трудно, а финальный аранжировщик, чересчур увлёкшись, применил агрессивные цифровые фильтры, сделавшие мой голос неузнаваемо мультяшным, из-за чего даже самые близкие люди впоследствии не поняли, что пою именно я</p>
+<p>Несмотря на разочарование, я всё же приняла волевое решение договориться со своим внутренним, вечно недовольным перфекционистом, опубликовать песню, пусть даже эта версия и казалась мне бесконечно далекой от идеала</p>
+<p>И вот, благодаря этой внутренней победе, 19 июня 2024 года (в день моего 36-летия) на всех мировых музыкальных платформах официально появилась первая версия мой первой авторской песни с символичным названием «Первый шаг»</p>
+<h3 id="vi">Эпизод VI. Пересборка</h3>
+<p>Но удивительные, порой пугающие своей точностью совпадения, на этом не закончились</p>
+<p>Вернувшись после полугодовой зимовки домой в Москву, я неожиданно для себя обнаружила, что в подвале моей пятиэтажки, где долгие годы безвылазно базировались дворники, теперь сделан свежий ремонт. И находится там настоящий творческий кластер: вокальная студия, профессиональная студия звукозаписи и даже офис местной радиостанции. Но самоое интересное, что работать туда перешла одна из преподавательниц из той самой первой вокальной студии</p>
+<p>Увидев её, я подошла, поздоровалась и рассказала, что у меня вышла первая песня, которой я, честно говоря, осталась жутко недовольна. В ответ я получила заманчивое предложение — позаниматься развитием голоса ещё немного, создать совершенно новую, более динамичную аранжировку и полностью перезаписать вокал, заставив его звучать по-настоящему уверенно и мотивационно</p>
+<p>Я не раздумывая согласилась. Кто я такая, чтобы спорить с самой Вселенной, так настойчиво подсовывающей мне столь очевидные, бьющие в глаза подсказки</p>
+<p>В этот раз я расслабилась, решив просто плыть по течению и доверять процессу. С удовольствием посещая каждое занятие, я с каждым разом пела всё увереннее, чувствуя себя намного свободнее и легче во время работы у микрофона</p>
+<p>И снова, подчиняясь какому-то мистическому годовому циклу, мы делали запись песни осенью, буквально за несколько дней до моего второго отлёта на зимовку на Бали</p>
+<p>Итоговым результатом во второй раз я осталась довольна уже на твердые 8 баллов из 10. Обновленная, более сильная вторая версия сингла «Первый шаг» была загружена на стриминги и стала доступна для прослушивания с 1 января 2025 года</p>
+<p>Включая попеременно две эти версии одной песни, я каждый раз слышу колоссальную разницу. И дело здесь не только в дополнительных двух месяцах вокальной практики, но и в моём внутреннем состоянии — в появлявшейся уверенности, принятии себя и обретаемой внутренней силе</p>
+<p>Это было время прохождения мощных, болезненных личных трансформаций — на меня одновременно навалились: жёсткий кризис среднего возраста, развод, выматывающие отношения, финансовые проблемы и полное ментальное выгорание, заставившее меня пойти в глубокую, честную пересборку собственной личности</p>
+<p>Оглядываясь сегодня назад, я понимаю, насколько всё «случайное» в моей жизни на самом деле было неслучайным. Жизнь бережно, но уверенно вела меня за руку, помогая проявить мой настоящий, истинный голос</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      
+  <div class="md-copyright">
+    © 1988–2026 Julia Tilinga | <a href="https://music.apple.com/us/artist/julia-tilinga/1752864835" target="_blank" rel="noopener">🅐 Apple Music</a> | <a href="https://open.spotify.com/artist/29Z2YEcTujgk9DreH3sRmC" target="_blank" rel="noopener">🅢 Spotify</a> | <a href="https://music.yandex.com/artist/22514951" target="_blank" rel="noopener">🅨 Yandex Music</a>
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.sections", "navigation.indexes"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

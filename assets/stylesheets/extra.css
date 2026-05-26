@@ -1,0 +1,35 @@
+/* Header Color */
+:root [data-md-color-primary="custom"] {
+  --md-primary-fg-color:        #1f2022;
+  --md-primary-fg-color--dark:  #151617;
+}
+
+/* Header. Hide word Search */
+.md-search__form .md-search__input::placeholder {
+  color: transparent;
+}
+
+/* Sidebar Left. Hide site name */
+.md-nav--primary .md-nav__title {
+  display: none;
+}
+
+/* Sidebar Left. Hide Home button */
+.md-nav--primary > .md-nav__list > .md-nav__item:first-child {
+  display: none;
+}
+
+/* Sidebar Right. Hide TOC title */
+.md-nav--secondary > label {
+  display: none !important;
+}
+
+/* Liks */
+.md-content a {
+  color: #3366CC;
+}
+
+/* Links */
+.md-content a:hover {
+  text-decoration: underline;
+}
